@@ -6,6 +6,7 @@ using System.Threading;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Firefox;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace P10_SeleniumTest
 {
@@ -118,6 +119,7 @@ namespace P10_SeleniumTest
                 foreach (IWebElement globalAction in globalActions) //loop to test each li in the twitter navbar 
                 {
                     string ActionName = globalAction.Text;
+                    Trace.WriteLine("debug --> twitter's navbar item clicked: " + ActionName); // or use debug.writeline/console.writeline
                     globalAction.Click(); //click Home, Notifications, Messages in Twitter's navbar
                     Thread.Sleep(5000);
                 } 
