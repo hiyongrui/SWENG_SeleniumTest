@@ -115,10 +115,10 @@ namespace P10_SeleniumTest
 
                 ReadOnlyCollection<IWebElement> globalActions = ActionContainer.FindElements(By.TagName("li"));
 
-                foreach (IWebElement globalAction in globalActions)
+                foreach (IWebElement globalAction in globalActions) //loop to test each li in the twitter navbar 
                 {
                     string ActionName = globalAction.Text;
-                    globalAction.Click();
+                    globalAction.Click(); //click Home, Notifications, Messages in Twitter's navbar
                     Thread.Sleep(5000);
                 } 
                
