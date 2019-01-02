@@ -128,10 +128,11 @@ namespace P10_SeleniumTest
             {
                 Console.WriteLine("Error: " + ex.ToString());
             }
-            finally            {
+            finally {
                 driver.Close();
                 driver.Quit();
             }
-        }
-    }
+        } // end of TwitterRoundUp()
+
+    } //end of UnitTest()
 }
